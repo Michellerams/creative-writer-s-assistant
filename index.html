@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Writer's Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'dark-950': '#0D0C1D',
+              'dark-900': '#1A1833',
+              'dark-800': '#2C2A52',
+              'dark-700': '#403E73',
+              'light-200': '#E0DFFF',
+              'light-400': '#A09EC0',
+              'light-500': '#817F9F',
+              'primary-400': '#F43F93',
+              'primary-500': '#D92D7E',
+              'primary-600': '#BF1A69',
+              'secondary-400': '#A8FF69',
+              'secondary-500': '#8BFF3D',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              fadeOut: {
+                '0%': { opacity: '1' },
+                '80%': { opacity: '1' },
+                '100%': { opacity: '0' },
+              },
+              typing: {
+                'from': { width: '0' },
+                'to': { width: '100%' },
+              },
+              blink: {
+                'from, to': { borderColor: 'transparent' },
+                '50%': { borderColor: 'currentColor' },
+              },
+            },
+            animation: {
+              fadeIn: 'fadeIn 1s ease-out forwards',
+              fadeOut: 'fadeOut 3.5s ease-in forwards',
+              typing: 'typing 2s steps(29) forwards',
+              blink: 'blink 1s step-end infinite',
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0",
+    "react-markdown": "https://esm.sh/react-markdown@8",
+    "remark-gfm": "https://esm.sh/remark-gfm@3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-dark-950 text-light-200 font-sans">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

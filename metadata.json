@@ -1,0 +1,5 @@
+{
+  "name": "Creative Writer's Assistant week3",
+  "description": "A specialized content generation tool that produces high-quality creative writing outputs like stories, poems, and character backstories using the Gemini API. Features customizable parameters, prompt templates, and result history.",
+  "requestFramePermissions": []
+}
